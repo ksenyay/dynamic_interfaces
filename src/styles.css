@@ -1,0 +1,131 @@
+/* CSS RESET */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* LAYOUT */
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  display: none;
+  margin: 25px;
+}
+
+svg {
+  height: 65px;
+  width: 65px;
+  margin: 20px;
+  color: lightblue;
+  cursor: pointer;
+}
+
+img.displayedSlide {
+  display: block;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  margin: 0 15px;
+}
+
+button.active {
+  height: 25px;
+  width: 25px;
+}
+
+nav {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+}
